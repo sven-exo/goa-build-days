@@ -12,7 +12,6 @@ on:
 permissions:
   contents: read
   actions: read
-  copilot-requests: write
 engine: copilot
 checkout: false
 network: defaults

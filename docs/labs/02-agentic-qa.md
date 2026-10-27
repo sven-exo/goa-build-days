@@ -145,7 +145,6 @@ and engine authentication. Treat unavailable tools or logs as blocked. Do not
 replace a failed live workflow with a fabricated report.
 
 Use the pinned GH-AW compiler to validate its generated file. General Actions
-linters may lag behind supported fields such as `copilot-requests` and
-`concurrency.queue`; do not hand-edit the lock file to silence those warnings.
+linters may lag behind supported fields such as `concurrency.queue`; do not hand-edit the lock file to silence those warnings.
 
 **Next:** [Lab 3: Foundry SDK](03-foundry-native.md).

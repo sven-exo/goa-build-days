@@ -57,11 +57,13 @@ version. Do not upgrade or replace an existing installation implicitly.
 
 The repository owner must configure approved
 [Copilot engine authentication](https://github.github.com/gh-aw/engines/copilot/).
-This example uses `copilot-requests: write` for organization-billed usage;
-use an approved organization workshop repository with that capability enabled.
-For a different authentication setup, the repository owner must adapt the
-source using the linked guidance and recompile it before the class.
-Adding a personal token alone does not override this example's billing mode.
+This example authenticates with a `COPILOT_GITHUB_TOKEN` repository secret, so
+it works in a personal repository. Create a fine-grained personal access token
+with the "Copilot Requests" account permission (your account needs a Copilot
+subscription), then add it as an Actions secret, for example with
+`gh aw secrets set COPILOT_GITHUB_TOKEN`. Usage is billed to that account.
+To use organization-billed usage instead, add `copilot-requests: write` to the
+workflow permissions in an approved organization repository and recompile.
 Never paste credentials into chat or code. Signing into the desktop app does
 not authenticate the workflow engine.
 
